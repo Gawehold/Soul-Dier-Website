@@ -1,0 +1,91 @@
+{
+	"logoFilePaths": {
+		"en": "logo-en.png",
+		"zh_hk": "logo-zh_hk.png"
+	},
+	"sectionNames": {
+		"featuresSection": {
+			"en": "Features",
+			"zh_hk": "特點"
+		},
+		"storySection": {
+			"en": "Story",
+			"zh_hk": "故事"
+		},
+		"screenshotsSection": {
+			"en": "Screenshots",
+			"zh_hk": "遊戲畫面"
+		},
+		"demoSection": {
+			"en": "Demo",
+			"zh_hk": "試玩版"
+		},
+		"newsletterSection": {
+			"en": "Newsletter",
+			"zh_hk": "新聞訂閱"
+		},
+		"developersSection": {
+			"en": "Developers",
+			"zh_hk": "開發者"
+		}
+	},
+	"features": [
+		{
+			"title": {
+				"en": "Classic turn-based tactical battles",
+				"zh_hk": "經典的回合制戰棋遊戲"
+			},
+			"content": {
+				"en": "Soul Dier is a classic JRPG style turn-based tactics game inspired by the trails (kiseki) series and many other games. Move, attack, skill, item, and wait – use all the actions you are familiars with to destroy the evils!",
+				"zh_hk": "一二三四二二三四三二三四四二三四"
+			},
+			"media": "background-dummy-3.png"
+		},
+		{
+			"title": {
+				"en": "Versatile Battle Gameplay",
+				"zh_hk": "多樣化的戰鬥遊玩"
+			},
+			"content": {
+				"en": "Around 60 unique levels with various themes without repetitiveness. Lots of special mechanics you wouldn’t expect to see in a tradition tactics game.",
+				"zh_hk": "一二三四二二三四三二三四四二三四"
+			},
+			"media": "background-dummy-3.png"
+		},
+		{
+			"title": {
+				"en": "Story with Cutscenes",
+				"zh_hk": "過場動畫以呈現故事"
+			},
+			"content": {
+				"en": "Every level is accompanied by at least one real-time 3D cutscene for telling the story of a bizarre adventure.",
+				"zh_hk": "一二三四二二三四三二三四四二三四"
+			},
+			"media": "background-dummy-3.png"
+		},
+		{
+			"title": {
+				"en": "Lightweight Progression System",
+				"zh_hk": "簡易的升級系統"
+			},
+			"content": {
+				"en": "No need for grinding (EXP farming)! Upgrade will be available just by finishing levels. All you need to do is simple selection among the character upgrades, charms and battle items.",
+				"zh_hk": "一二三四二二三四三二三四四二三四"
+			},
+			"media": "background-dummy-3.png"
+		}
+	],
+	
+	"story": "Beneath the fading town of Dirtmouth sleeps a vast, ancient kingdom. Many are drawn beneath the surface, searching for riches, or glory, or answers to old secrets.As the enigmatic Knight, you’ll traverse the depths, unravel its mysteries and conquer its evils.",
+	
+	"developers": [
+		{
+			"name": "Gawehold",
+			"description": "A human"
+		},
+		{
+			"name": "Weonix",
+			"description": "A human"
+		}
+	]
+}
