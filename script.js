@@ -58,7 +58,7 @@ const vh = Math.max(document.documentElement.clientHeight || 0, window.innerHeig
 
 function toggleMenu() {
 	var style = document.getElementById("navbar-contacts").style;
-	console.log(style.display);
+	// console.log(style.display);
 	if (style.display == "none" || style.display == "") {
 		style.display = "inline-block";
 	} else {
@@ -80,6 +80,7 @@ function changeLanguage(langCode) {
 	UpdateDevelopers();
 	UpdateDemoSection();
 	UpdateNewsletterSection();
+	UpdateDevelopmentStatusSection();
 	UpdateFooter();
 }
 
@@ -95,6 +96,16 @@ function UpdateSectionNames() {
 function UpdateFooter() {
 	document.getElementById("footer").getElementsByTagName("span")[0].innerHTML = contentJson.footer[0][currentLangCode];
 	document.getElementById("footer").getElementsByTagName("span")[1].innerHTML = contentJson.footer[1][currentLangCode];
+}
+
+function UpdateDevelopmentStatusSection() {
+	document.getElementById("developmentStatusSectionParagraphs").innerHTML = "";
+	
+	for (var i = 0; i < contentJson.developmentStatus[currentLangCode].length; i++) {
+		var paragraph = document.createElement("p");
+		paragraph.innerHTML = contentJson.developmentStatus[currentLangCode][i];
+		document.getElementById("developmentStatusSectionParagraphs").appendChild(paragraph);
+	}
 }
 
 function UpdateNewsletterSection() {
@@ -146,11 +157,18 @@ function UpdateDevelopers() {
 	developersSection.getElementsByTagName("p")[1].innerHTML = contentJson.developers[1][currentLangCode];
 }
 
+function htmlToElement(html) {
+	var template = document.createElement('template');
+	html = html.trim(); // Never return a text node of whitespace as the result
+	template.innerHTML = html;
+	return template.content.firstChild;
+}
+
 function UpdateDemoSection() {
 	var section = document.getElementById("demoSection");
 	section.getElementsByTagName("p")[0].innerHTML = contentJson.demo.paragraph[currentLangCode];
-	section.getElementsByTagName("button")[0].innerHTML = contentJson.demo.downloadDutton[currentLangCode];
-	section.getElementsByTagName("p")[1].innerHTML = contentJson.demo.disclaimer[currentLangCode];
+	// section.getElementsByTagName("button")[0].innerHTML = contentJson.demo.downloadDutton[currentLangCode];
+	// section.getElementsByTagName("p")[1].innerHTML = contentJson.demo.disclaimer[currentLangCode];
 }
 
 function InitializeFeatureItems () {
@@ -165,6 +183,7 @@ function InitializeFeatureItems () {
 		
 		featureItem.getElementsByTagName("div")[0].getElementsByTagName("h3")[0].innerHTML = featureJson[i].title[currentLangCode];
 		featureItem.getElementsByTagName("div")[0].getElementsByTagName("p")[0].innerHTML = featureJson[i].content[currentLangCode];
+		featureItem.getElementsByTagName("video")[0].getElementsByTagName("source")[0].src = featureJson[i].media;
 		
 		if (i % 2 != 0) {
 			featureItem.appendChild(featureItem.childNodes[1]);
@@ -186,10 +205,13 @@ function InitializeFooterContacts() {
 InitializeFeatureItems();
 InitializeFooterContacts();
 
+changeLanguage(currentLangCode);
+/*
 if (/^zh\b/.test(navigator.language)) {
 	changeLanguage("zh_hk");
 } else {
 	changeLanguage(currentLangCode);
 }
+*/
 
 document.getElementById("allContents").style.display = "initial";

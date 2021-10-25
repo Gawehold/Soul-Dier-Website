@@ -9,7 +9,7 @@
 		<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+HK:wght@100;300;400;500;700;900&display=swap" rel="stylesheet"> 
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Project Souldier Official Website</title>
+		<title>Soul Dier (Project Souldier) Official Website</title>
 		<link rel="icon" type="image/png" href="RkFGR2Mm_400x400.jpg"/>
 	</head>
 	
@@ -23,7 +23,7 @@
 		<div id="allContents">
 			<div id="headingSection">
 				<video autoplay muted loop id="headingVideo">
-					<source src="file:///D:\SRPG\Advertisement\godot-showreel-2021\godot-showreel-2021-candidate-2.mp4" type="video/mp4" height="500px">
+					<source src="heading-video.mp4" type="video/mp4" height="500px">
 				</video>
 				
 				<div id="headingContentContainer">
@@ -39,7 +39,10 @@
 					<h2>⬩ Features ⬩</h2>
 					<div id="feature-items">
 						<div class="feature-item" id="feature-item-template">
-							<img src="background-dummy-3.png"></img>
+							<video autoplay muted loop>
+								<source src="" type="video/mp4" height="500px">
+							</video>
+							<!-- <img src="background-dummy-3.png"></img> -->
 							<div class="feature-item-text-section">
 								<h3>Feature Title Template</h3>
 								<p>Feature content template</p>
@@ -60,13 +63,20 @@
 				</div>
 				-->
 				
+				<div id="developmentStatusSection" class="MainContentSection">
+					<h2>⬩ Development Status ⬩</h2>
+					<div id="developmentStatusSectionParagraphs"></div>
+				</div>
+				
 				<div id="demoSection" class="MainContentSection">
 					<h2>⬩ Demo ⬩</h2>
 					<p>Paragraph</p>
+					<!--
 					<div style="text-align:center;">
 						<a href="" target="_blank"><button type="button" class="GeneralButton">Download Button</button></a>
 					</div>
 					<p>Disclaimer</p>
+					-->
 				</div>
 				
 				<div id="developersSection" class="MainContentSection">
@@ -135,41 +145,20 @@
 			"zh_hk": "新聞材料"
 		},
 		
-		"newsletterSubscriptionLink": {
-			"en": "https://docs.google.com/forms/d/e/1FAIpQLSeCRvztpeXm6ON9dWL9cyOyzwIehF_7PCn6IONzz70Mw3lUoA/viewform?usp=sf_link",
-			"zh_hk": "https://docs.google.com/forms/d/e/1FAIpQLSdjZRZ63at7HorMkae-rIRDF8Qce7jLDsodPSL_YIhvIl2NFw/viewform?usp=sf_link"
-		},
-		
-		"newsletterButton": {
-			"en": "Subscribe (English version, link to Google Form)",
-			"zh_hk": "訂閱（中文版本，連結至Google Form）"
-		},
-		
-		"footer": [
-			{
-				"en": "This website is created by Gawehold",
-				"zh_hk": "此網站由 Gawehold 所製作"
-			},
-			{
-				"en": "Copyright © 2021 Project Souldier Dev. All Rights Reserved",
-				"zh_hk": "Copyright © 2021 Project Souldier Dev. All Rights Reserved"
-			}
-		],
-	
 		"logoFilePaths": {
 			"en": "logo-en.png",
 			"zh_hk": "logo-zh_hk.png"
 		},
 		
 		"description": {
-			"en": "An indle tactical turn-based game",
+			"en": "The last chance to live",
 			"zh_hk": "世界上最好的遊戲，這，就是７。"
 		},
 		
 		"sectionNames": {
 			"featuresSection": {
 				"en": "⬩ Features ⬩",
-				"zh_hk": "⬩ 特點 ⬩"
+				"zh_hk": "⬩ 特色 ⬩"
 			},
 			"storySection": {
 				"en": "⬩ Story ⬩",
@@ -178,6 +167,10 @@
 			"screenshotsSection": {
 				"en": "⬩ Screenshots ⬩",
 				"zh_hk": "⬩ 遊戲畫面 ⬩"
+			},
+			"developmentStatusSection": {
+				"en": "⬩ Dev. Status ⬩",
+				"zh_hk": "⬩ 開發進度 ⬩"
 			},
 			"demoSection": {
 				"en": "⬩ Demo ⬩",
@@ -199,10 +192,10 @@
 					"zh_hk": "經典的回合制戰棋遊戲"
 				},
 				"content": {
-					"en": "Soul Dier is a classic JRPG style turn-based tactics game inspired by the trails (kiseki) series and many other games. Move, attack, skill, item, and wait – use all the actions you are familiars with to destroy the evils!",
+					"en": "Soul Dier is a classic JRPG style turn-based tactics game inspired by the trails (kiseki) series and many other games. Move, attack, skill, item, and wait—use all the actions you are familiar with to destroy the evils!",
 					"zh_hk": "一二三四二二三四三二三四四二三四"
 				},
-				"media": "background-dummy-3.png"
+				"media": "random-gameplay.mp4"
 			},
 			{
 				"title": {
@@ -210,21 +203,21 @@
 					"zh_hk": "多樣化的戰鬥遊玩"
 				},
 				"content": {
-					"en": "Around 60 unique levels with various themes without repetitiveness. Lots of special mechanics you wouldn’t expect to see in a tradition tactics game.",
+					"en": "Around 60 unique levels and more than 20 hours of playtime with various themes and unique scenes without repetitiveness. </p><p>Puzzle solving, car fight, stealth...lots of special mechanics you wouldn’t expect to see in a tradition tactics game!",
 					"zh_hk": "一二三四二二三四三二三四四二三四"
 				},
-				"media": "background-dummy-3.png"
+				"media": "heading-video.mp4"
 			},
 			{
 				"title": {
-					"en": "Story with Cutscenes",
+					"en": "Exploring the Mysterious World",
 					"zh_hk": "過場動畫以呈現故事"
 				},
 				"content": {
-					"en": "Every level is accompanied by at least one real-time 3D cutscene for telling the story of a bizarre adventure.",
+					"en": "Every level is accompanied by at least one real-time 3D cutscene for telling the story of a bizarre adventure. </p><p>Along the adventure, you will meet new friends and encounter enemies. You will find happinness and experience sadness. Would you able to overcome your weakness to reach the core of the world through the darkness and reveal the truth of the world?",
 					"zh_hk": "一二三四二二三四三二三四四二三四"
 				},
-				"media": "background-dummy-3.png"
+				"media": "cutscene1-12-combo.mp4"
 			},
 			{
 				"title": {
@@ -232,23 +225,37 @@
 					"zh_hk": "簡易的升級系統"
 				},
 				"content": {
-					"en": "No need for grinding (EXP farming)! Upgrade will be available just by finishing levels. All you need to do is simple selection among the character upgrades, charms and battle items.",
+					"en": "No need for grinding (EXP farming). Upgrades will be available just by finishing levels. </p><p>All you need to do is simple selection among the character upgrades, charms and battle items. Be focus on your brilliant strategies to eliminate the tough enemies!",
 					"zh_hk": "一二三四二二三四三二三四四二三四"
 				},
-				"media": "background-dummy-3.png"
+				"media": "Tactical Battle (DEBUG) 2021-01-18 23-14-24.mp4"
 			}
 		],
 		
 		"story": {
-			"en": "In the game's story, the main character awoke in a forest and lost all memories.\nHence he is going to take a trip in order to find out the way to recover the memory.\nMeanwhile, a armed group is trying to assault him and his allies for unkown reasons.",
+			"en": "<b>Curtain</b>, the main character of the story, awoke in a strange forest from a blurry and dark dream, without any memory left inside his head. Despite all the confusion and the questions, he was keeping chased and assaulted by the evil legion—<b>The Sinkers</b>, which forces him to stand up and pick up the weapon to fight for living. </p><p>To find the lost memory back, <b>Curtain</b> starts a adventure across the world. During the adventure, he met various friends on the road and helped each others to achieve their own goals, but as the adventure moves forward, the mistery of the world and Curtain himself only became more complicated and weird. </p><p>What will he be facing when he reach the end of the adventure...?",
 			
 			"zh_hk": "二三佃汪永之身叛找伋去仕母毋來乞叼癬我駹哂人乃左大汀仗弓左1几之地火划"
 		},
 		
+		"developmentStatus": {
+			"en": [
+				"Soul Dier is still currently under development. We will release a short demo and start a Kickstarter campaign by the end of 2021. While it is hard to estimate the precise date when we finish the whole game, we have been making steady progress as you can see in our images/videos, and we aim to release it in late 2022.",
+				"If you are interested in the development progress, please follow us on social media (Twitter, Youtube and Discord) and subscribe to the newsletter down below."
+			],
+			"zh_hk": [
+				"",
+				""
+			]
+		},
+		
 		"demo": {
 			"paragraph": {
-				"en": "Please also consider to fill in this survey after playng the demo to help us improving the game before it is released.",
-				"zh_hk": "請考慮在遊玩試玩版後填寫以下問卷提供你的意見以協助我們改善遊戲的正式版。"
+				"en-hidden": "Please also consider to fill in this survey <a href=\"\" target=\"_blank\">(link to Google Form)</a> after playng the demo to help us improving the game before it is released.",
+				"zh_hk-hidden": "請考慮在遊玩試玩版後填寫以下問卷<a href=\"\" target=\"_blank\">（連結至Google Form）</a>提供你的意見以協助我們改善遊戲的正式版。",
+				
+				"en": "Coming soon...",
+				"zh_hk": "即將推出，敬請期待"
 			},
 			"downloadDutton": {
 				"en": "Download (Link to OneDrive)",
@@ -270,6 +277,27 @@
 				"en": "Soul Dier is made with Godot Engine. We sincerely appreciate Juan Linietsky (the creator of Godot Engine) and all the contributors to create this beautiful free and open-source game engine!",
 				
 				"zh_hk": "戎叛為戎畈戎灼油宗凍涼母付佃汀牛受以畔定戎毋灼伋宗之汁之半剃乃付少峙耿野耒乙甩妃八良凍本付畔乙朽毛終己充囫技付"
+			}
+		],
+		
+				"newsletterSubscriptionLink": {
+			"en": "https://docs.google.com/forms/d/e/1FAIpQLSeCRvztpeXm6ON9dWL9cyOyzwIehF_7PCn6IONzz70Mw3lUoA/viewform?usp=sf_link",
+			"zh_hk": "https://docs.google.com/forms/d/e/1FAIpQLSdjZRZ63at7HorMkae-rIRDF8Qce7jLDsodPSL_YIhvIl2NFw/viewform?usp=sf_link"
+		},
+		
+		"newsletterButton": {
+			"en": "Subscribe (English version, link to Google Form)",
+			"zh_hk": "訂閱（中文版本，連結至Google Form）"
+		},
+		
+		"footer": [
+			{
+				"en": "This website is created by Gawehold",
+				"zh_hk": "此網站由 Gawehold 所製作"
+			},
+			{
+				"en": "Copyright © 2021 Project Souldier Dev. All Rights Reserved",
+				"zh_hk": "Copyright © 2021 Project Souldier Dev. All Rights Reserved"
 			}
 		]
 	}
