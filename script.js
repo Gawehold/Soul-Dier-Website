@@ -206,12 +206,12 @@ InitializeFeatureItems();
 InitializeFooterContacts();
 
 changeLanguage(currentLangCode);
-/*
+//*
 if (/^zh\b/.test(navigator.language)) {
 	changeLanguage("zh_hk");
 } else {
 	changeLanguage(currentLangCode);
 }
-*/
+//*/
 
 document.getElementById("allContents").style.display = "initial";
