@@ -26,8 +26,12 @@ document.body.onscroll = function myFunction() {
 	var target = document.getElementById("storySection");
 	var xvalue = "center";
 	
-	var range = target.clientHeight-1080;
-	var yvalue = (target.getBoundingClientRect().y + target.clientHeight) / (document.documentElement.clientHeight + target.clientHeight) * range;
+	const IMAGE_HEIGHT = 1080;
+	const MOVING_SCALE = 0.5;
+	
+	var range = target.clientHeight - IMAGE_HEIGHT;
+	
+	var yvalue = -IMAGE_HEIGHT * 0.5 * (1.0-MOVING_SCALE) + MOVING_SCALE * (target.getBoundingClientRect().y + target.clientHeight) / (document.documentElement.clientHeight + target.clientHeight) * range;
 	
 	target.style.backgroundPosition = xvalue + " " + 	yvalue + "px";
 }
