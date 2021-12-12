@@ -25,9 +25,11 @@ document.body.onscroll = function myFunction() {
 	var scrolltotop = document.scrollingElement.scrollTop;
 	var target = document.getElementById("storySection");
 	var xvalue = "center";
-	var factor = 0.25;
-	var yvalue = scrolltotop * factor;
-	target.style.backgroundPosition = xvalue + " " + yvalue + "px";
+	
+	var range = target.clientHeight-1080;
+	var yvalue = (target.getBoundingClientRect().y + target.clientHeight) / (document.documentElement.clientHeight + target.clientHeight) * range;
+	
+	target.style.backgroundPosition = xvalue + " " + 	yvalue + "px";
 }
 
 function cumulativeOffset(element) {
