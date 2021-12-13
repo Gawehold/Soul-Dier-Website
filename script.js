@@ -24,16 +24,16 @@ function getScrollbarWidth() {
 document.body.onscroll = function myFunction() { 
 	var scrolltotop = document.scrollingElement.scrollTop;
 	var target = document.getElementById("storySection");
-	var xvalue = "center";
 	
 	const IMAGE_HEIGHT = 1080;
-	const MOVING_SCALE = 0.5;
 	
-	var range = target.clientHeight - IMAGE_HEIGHT;
+	var movingSacle = Math.min(target.clientHeight / 1000, 1.0);
 	
-	var yvalue = -IMAGE_HEIGHT * 0.5 * (1.0-MOVING_SCALE) + MOVING_SCALE * (target.getBoundingClientRect().y + target.clientHeight) / (document.documentElement.clientHeight + target.clientHeight) * range;
+	var r = target.getBoundingClientRect().y;
+	var m = (IMAGE_HEIGHT - target.clientHeight) / (document.documentElement.clientHeight + target.clientHeight);
+	var dy = movingSacle * m * (r - document.documentElement.clientHeight) - (1.0-movingSacle) * 0.5 * (IMAGE_HEIGHT - target.clientHeight);
 	
-	target.style.backgroundPosition = xvalue + " " + 	yvalue + "px";
+	target.style.backgroundPosition = "center " +	dy + "px";
 }
 
 function cumulativeOffset(element) {
@@ -214,7 +214,7 @@ InitializeFooterContacts();
 changeLanguage(currentLangCode);
 //*
 if (/^zh\b/.test(navigator.language)) {
-	changeLanguage("zh_hk");
+	//changeLanguage("zh_hk");
 } else {
 	changeLanguage(currentLangCode);
 }
