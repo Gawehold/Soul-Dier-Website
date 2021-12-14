@@ -77,6 +77,14 @@ var currentLangCode = "en";
 function changeLanguage(langCode) {
 	currentLangCode = langCode;
 	
+	if (langCode == "zh_hk") {
+		document.title = "凋靈戰士 Soul Dier 官方網站"
+		document.documentElement.lang = "zh-HK"
+	} else {
+		document.title = "Soul Dier (Project Souldier) Official Website"
+		document.documentElement.lang = "en"
+	}
+	
 	UpdateFeatureItems();
 	UpdatePressKitButton();
 	UpdateLogo();
@@ -214,7 +222,7 @@ InitializeFooterContacts();
 changeLanguage(currentLangCode);
 //*
 if (/^zh\b/.test(navigator.language)) {
-	//changeLanguage("zh_hk");
+	changeLanguage("zh_hk");
 } else {
 	changeLanguage(currentLangCode);
 }
