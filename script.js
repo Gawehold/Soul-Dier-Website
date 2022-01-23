@@ -180,8 +180,8 @@ function htmlToElement(html) {
 
 function UpdateDemoSection() {
 	var section = document.getElementById("demoSection");
-	section.getElementsByTagName("p")[0].innerHTML = contentJson.demo.paragraph[currentLangCode];
-	// section.getElementsByTagName("button")[0].innerHTML = contentJson.demo.downloadDutton[currentLangCode];
+	// section.getElementsByTagName("p")[0].innerHTML = contentJson.demo.paragraph[currentLangCode];
+	section.getElementsByTagName("button")[0].innerHTML = contentJson.demo.downloadDutton[currentLangCode];
 	// section.getElementsByTagName("p")[1].innerHTML = contentJson.demo.disclaimer[currentLangCode];
 }
 
